@@ -33,4 +33,4 @@ http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': MIME[ext] || 'application/octet-stream' });
     res.end(data);
   });
-}).listen(PORT, () => console.log(`Listening on port ${PORT}`));
+}).listen(PORT, '0.0.0.0', () => console.log(`Listening on port ${PORT}`));
