@@ -756,13 +756,10 @@ src="https://www.facebook.com/tr?id=933096036169360&ev=PageView&noscript=1"
     );
     document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
 
-    // Click tracking stub
+    // Click tracking
     document.querySelectorAll('[data-cta]').forEach(el => {
       el.addEventListener('click', () => {
-        const pos = el.dataset.cta;
-        // gtag('event', 'whatsapp_join_click', { cta_position: pos });
-        // fbq('track', 'Lead', { content_name: 'whatsapp_group', cta_position: pos });
-        console.log('[CTA]', pos);
+        fbq('track', 'Lead');
       });
     });
   </script>
